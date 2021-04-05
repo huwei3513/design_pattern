@@ -13,10 +13,10 @@ public class Client {
         Meal vegMeal = builder.prepareVegMeal();
         System.out.println("Veg Meal:");
         vegMeal.showItems();
-        System.out.println("Total cost:" + vegMeal.getCost());
+        System.out.println("Total cost:" + vegMeal.getCosts());
         Meal nonVegMeal = builder.prepareNonVegMeal();
         System.out.println("Non-Veg Meal:");
         nonVegMeal.showItems();
-        System.out.println("Total cost:" + nonVegMeal.getCost());
+        System.out.println("Total cost:" + nonVegMeal.getCosts());
     }
 }
