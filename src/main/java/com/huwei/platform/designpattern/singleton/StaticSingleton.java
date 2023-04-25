@@ -13,6 +13,9 @@ public class StaticSingleton {
     }
 
     private StaticSingleton() {
+        if (SingletonHolder.INSTANCE != null) {
+            throw new RuntimeException("不允许反射构造对象");
+        }
     }
 
     public static StaticSingleton getInstance() {
