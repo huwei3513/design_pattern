@@ -25,4 +25,9 @@ public class StaticSingleton {
     public void work() {
         System.out.println("StaticSingleton do some work!");
     }
+
+    public static void main(String[] args) {
+        StaticSingleton singleton = StaticSingleton.getInstance();
+        singleton.work();
+    }
 }
