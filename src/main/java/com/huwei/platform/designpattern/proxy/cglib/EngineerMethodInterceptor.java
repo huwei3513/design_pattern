@@ -16,8 +16,8 @@ public class EngineerMethodInterceptor implements MethodInterceptor {
 
     private Object target;
 
-    public EngineerMethodInterceptor() {
-        this.target = new Engineer();
+    public EngineerMethodInterceptor(Object target) {
+        this.target = target;
     }
 
     @Override

@@ -13,7 +13,7 @@ public class Client {
     public static void main(String[] args) {
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(Engineer.class);
-        enhancer.setCallback(new EngineerMethodInterceptor());
+        enhancer.setCallback(new EngineerMethodInterceptor(new Engineer()));
         Engineer engineerProxy = (Engineer) enhancer.create();
         engineerProxy.eat();
         engineerProxy.work();
