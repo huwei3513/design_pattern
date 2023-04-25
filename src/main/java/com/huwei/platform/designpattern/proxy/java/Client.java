@@ -12,7 +12,7 @@ public class Client {
 
     public static void main(String[] args) {
         Subject proxy = (Subject) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(),
-                new Class[]{Subject.class},new SubjectInvocationHandler());
+                new Class[]{Subject.class}, new SubjectInvocationHandler(new RealSubject()));
         proxy.sellBooks();
         proxy.speak();
 
